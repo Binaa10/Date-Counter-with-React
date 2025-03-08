@@ -1,0 +1,40 @@
+* {
+  background-color: antiquewhite;
+  text-align: center;
+}
+.buttonOne {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.buttonTwo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.buttonOne button {
+  cursor: pointer;
+  padding: 10px 15px;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.buttonTwo button {
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+p {
+  font-size: 22px;
+}
+.ale {
+  padding: 0%;
+}
