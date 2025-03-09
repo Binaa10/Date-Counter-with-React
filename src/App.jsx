@@ -7,12 +7,9 @@ export default function App() {
   const [steps, setSteps] = useState(1);
   const date = new Date().toDateString();
 
-  const [dd, setDd] = useState(0);
-
   const dadd = new Date();
 
   dadd.setDate(dadd.getDate() + counter);
-  console.log(dd);
 
   function handleNext() {
     setSteps(steps + 1);
@@ -22,11 +19,9 @@ export default function App() {
   }
   function handleNextCounter() {
     setCounter(counter + steps);
-    setDd(dadd + counter);
   }
   function handlePreviousCounter() {
     setCounter(counter - steps);
-    setDd(dadd - counter);
   }
 
   return (
