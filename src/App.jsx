@@ -47,7 +47,7 @@ export default function App() {
           <p>Today is {date}</p>
         ) : (
           <p>
-            {0 - counter} day ago was {dadd.toDateString()}{" "}
+            {Math.abs(counter)} day ago was {dadd.toDateString()}{" "}
           </p>
         )}
       </div>
