@@ -20,7 +20,7 @@ export default function App() {
     setSteps(1);
     setCounter(0);
   }
-  return (
+  return ( 
     <>
       <div className="ale">
         <div className="buttonOne">
