@@ -10,32 +10,37 @@ export default function App() {
   const dadd = new Date();
 
   dadd.setDate(dadd.getDate() + counter);
-
-  function handleNext() {
-    setSteps(steps + 1);
-  }
-  function handlePrevious() {
-    setSteps(steps - 1);
-  }
   function handleNextCounter() {
     setCounter(counter + steps);
   }
   function handlePreviousCounter() {
     setCounter(counter - steps);
   }
-
+  function handleClick() {
+    setSteps(1);
+    setCounter(0);
+  }
   return (
     <>
       <div className="ale">
         <div className="buttonOne">
-          <button onClick={handlePrevious}>-</button>
+          <input
+            type="range"
+            min={0}
+            max={10}
+            value={steps}
+            onChange={(e) => setSteps(Number(e.target.value))}
+          />
+
           <p>step: {steps} </p>
-          <button onClick={handleNext}>+</button>
         </div>
         <div className="buttonTwo">
           <button onClick={handlePreviousCounter}>-</button>
-          <p>Count: {counter}</p>
-
+          <input
+            type="text"
+            value={counter}
+            onChange={(e) => setCounter(Number(e.target.value))}
+          />
           <button onClick={handleNextCounter}>+</button>
         </div>
         {counter > 0 ? (
@@ -50,6 +55,11 @@ export default function App() {
             {Math.abs(counter)} day ago was {dadd.toDateString()}{" "}
           </p>
         )}
+        {counter !== 0 || steps !== 1 ? (
+          <div>
+            <button onClick={handleClick}>Reset</button>
+          </div>
+        ) : null}
       </div>
     </>
   );
